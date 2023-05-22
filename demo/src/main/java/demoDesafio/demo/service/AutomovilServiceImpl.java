@@ -3,12 +3,14 @@ package demoDesafio.demo.service;
 import demoDesafio.demo.model.Automovil;
 import org.springframework.stereotype.Service;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 @Service
 public class AutomovilServiceImpl implements AutomovilService{
+
     @Override
     public List<Automovil> generarAutomoviles(int cantidad) {
 
@@ -37,10 +39,8 @@ public class AutomovilServiceImpl implements AutomovilService{
     }
 
 
-
     // Metodos para generar las características del automovil de forma aleatoria
     // Ver si el nombre de los metodos son los correctos (entre generar o obtener)
-
     private String generarMarcaAleatoria(){
         String[] marcas = {"Ford","Mazda","Chevrolet","Toyota","Suzuki","Nissan"};
         Random random = new Random();
@@ -48,13 +48,14 @@ public class AutomovilServiceImpl implements AutomovilService{
         return marcas[marcaAleatoria];
     }
 
-    private int generarAñoAleatorio(){
-        int añoInicial= 2015;
-        int añoFinal = 2023;
-        Random random = new Random();
-        int año = random.nextInt(añoInicial - añoFinal +1)+añoInicial;
-        return año;
+    //Se genera un número aleatorio entre 0 y 8(el tamaño del rango).
+    // Luego se le suma limiteInferior para obtener un año aleatorio valido(dentro del rango).
+    private int generarAñoAleatorio() {
+        int limiteInferior = 2015;
+        int limiteSuperior = 2023;
+        return new Random().nextInt(limiteSuperior - limiteInferior + 1) + limiteInferior;
     }
+
 
     private String generarColorAleatorio() {
         String[] colores = {"Rojo","Blanco","Negro","Azul","Amarillo"};
@@ -63,6 +64,7 @@ public class AutomovilServiceImpl implements AutomovilService{
         return colores[colorAleatorio];
     }
 
+    //cambiar el tipo del formato. aparece en notación científica
     private double generarPrecioAleatorio() {
         double precioMinimo = 8000000;
         double precioMaximo = 30000000;

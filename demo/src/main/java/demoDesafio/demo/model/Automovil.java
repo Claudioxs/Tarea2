@@ -2,6 +2,8 @@ package demoDesafio.demo.model;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
+import java.util.Objects;
+
 
 public class Automovil {
 
@@ -122,4 +124,5 @@ public class Automovil {
     public void setPopularidad(int popularidad) {
         this.popularidad = popularidad;
     }
+
 }
