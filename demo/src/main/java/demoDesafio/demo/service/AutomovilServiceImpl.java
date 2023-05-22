@@ -7,14 +7,16 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 @Service
 public class AutomovilServiceImpl implements AutomovilService{
 
+    List<Automovil> automoviles = new ArrayList<>();
     @Override
     public List<Automovil> generarAutomoviles(int cantidad) {
 
-        List<Automovil> automoviles = new ArrayList<>();
+
         Random random = new Random();
 
         for (int i = 0; i < cantidad; i++) {
@@ -121,5 +123,24 @@ public class AutomovilServiceImpl implements AutomovilService{
         }
         return false; // para los otros tipos
     }
+    //Metodos para filtrar
+    @Override
+    public List<Automovil> buscarColor(String color) {
+
+        return automoviles.stream().filter(x -> x.getColor()==color).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Automovil> buscarTipo(String tipo) {
+        return automoviles.stream().filter(x -> x.getTipo()==tipo).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Automovil> buscarPrecio(double precio) {
+        return automoviles.stream().filter(x -> x.getPrecio()==precio).collect(Collectors.toList());
+    }
+
+
+
 
 }
