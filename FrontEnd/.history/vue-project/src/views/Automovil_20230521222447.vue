@@ -1,0 +1,65 @@
+<template>
+    <head>
+        <title>Page Title</title>
+    </head>
+
+
+
+<div class="form-control w-full max-w-xs">
+  <label class="label">
+    <span class="label-text">Indique la cantidad de Automoviles </span> <br>
+    
+  </label>
+  <input type="number" placeholder="Ingrese N°" class="input input-bordered input-success w-full max-w-xs" />
+  
+  <label class="label">
+   
+  </label>
+</div>
+<br> <br>
+
+<div class="dropdown dropdown-left">
+  <label tabindex="0" class="btn m-1">Click</label>
+  <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
+
+<!-- The button to open modal -->
+<label for="my-modal-5" class="btn">open modal</label>
+
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="my-modal-5" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box w-11/12 max-w-5xl">
+    <h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
+    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+    <div class="modal-action">
+      <label for="my-modal-5" class="btn">Yay!</label>
+    </div>
+  </div>
+</div>
+
+<div class="card w-96 bg-base-100 shadow-xl">
+  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <div class="card-body">
+    <h2 class="card-title">Shoes!</h2>
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <div class="card-actions justify-end">
+      <button class="btn btn-primary">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+</template>
