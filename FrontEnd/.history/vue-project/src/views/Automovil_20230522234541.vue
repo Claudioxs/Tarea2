@@ -12,7 +12,7 @@
   </label>
  <div class="modal-start"  >
   <input type="number" placeholder="Ingrese N°" class="input input-bordered input-success w-full max-w-xs" />  
-    <label for="Modal"  @click="crearAutomovil(label-text)" class="btn sm" style="background-color: #36D399">Confirmar</label>
+    <label for="ModalBorrar"  @click="crearAutomovil(label-text)" class="btn" style="background-color: #36D399">Confirmar</label>
   </div>
 </div>
 <br><br>
@@ -62,8 +62,9 @@
    padding-right: 900px;
    
 }
-
-
+.modal-action{
+  display: block;
+}
 
 
 </style>

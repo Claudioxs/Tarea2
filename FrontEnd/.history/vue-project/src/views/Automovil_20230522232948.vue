@@ -10,21 +10,26 @@
     <br><br>
 
   </label>
- <div class="modal-start"  >
+ <div class="modal-action"  >
   <input type="number" placeholder="Ingrese N°" class="input input-bordered input-success w-full max-w-xs" />  
-    <label for="Modal"  @click="crearAutomovil(label-text)" class="btn sm" style="background-color: #36D399">Confirmar</label>
+    <label for="ModalBorrar"  @click="crearAutomovil(label-text)" class="btn" style="background-color: #36D399">Confirmar</label>
   </div>
 </div>
 <br><br>
 <div class="container">
-
 <select class="form-select" aria-label="Default select example" aria-expanded="false">
-  <option selected>Filtrar por Tipo</option>
+  <option selected>Filtrar por Marca</option>
+  <option value="1">Marca</option>
+  <option value="2">Año</option>
+
+</select>
+<select class="form-select" aria-label="Default select example">
+  <option selected>Filtrar por Año</option>
   <option value="1">Sedan</option>
   <option value="2">Camioneta</option>
   <option value="3">SUV</option>
 
-</select> <br>
+</select>
 <select class="form-select" aria-label="Default select example">
   <option selected>Filtrar por Color</option>
   <option value="1">Rojo</option>
@@ -33,20 +38,15 @@
   <option value="4">Azul</option>
   <option value="5">Amarillo</option>
 
-</select> <br>
+</select>
 <select class="form-select" aria-label="Default select example">
   <option selected>Filtrar por Precio</option>
-  <option value="1">10000000</option>
-  <option value="1">20000000</option>
-  <option value="2">30000000</option>
+  <option value="1">Marca</option>
+  <option value="2">Año</option>
 
 </select>
-</div> <br>
 
-<div class="modal-box w-11/12 max-w-5xl">
-    
-    <h3 class="font-bold text-lg" align="center">Automoviles</h3>
-      
+
 
 
 </div>
@@ -62,8 +62,9 @@
    padding-right: 900px;
    
 }
-
-
+.modal-action{
+  display: block;
+}
 
 
 </style>

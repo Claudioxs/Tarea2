@@ -10,9 +10,9 @@
     <br><br>
 
   </label>
- <div class="modal-start"  >
+ <div class="modal-action"  >
   <input type="number" placeholder="Ingrese N°" class="input input-bordered input-success w-full max-w-xs" />  
-    <label for="Modal"  @click="crearAutomovil(label-text)" class="btn sm" style="background-color: #36D399">Confirmar</label>
+    <label for="ModalBorrar"  @click="crearAutomovil(label-text)" class="btn" style="background-color: #36D399">Confirmar</label>
   </div>
 </div>
 <br><br>
@@ -41,12 +41,8 @@
   <option value="2">30000000</option>
 
 </select>
-</div> <br>
 
-<div class="modal-box w-11/12 max-w-5xl">
-    
-    <h3 class="font-bold text-lg" align="center">Automoviles</h3>
-      
+
 
 
 </div>
@@ -62,8 +58,9 @@
    padding-right: 900px;
    
 }
-
-
+.modal-action{
+  display: block;
+}
 
 
 </style>
