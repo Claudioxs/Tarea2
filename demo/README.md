@@ -1,0 +1,1 @@
+Para generar automóviles, deben realizar una solicitud GET a la siguiente URL: http://localhost:8080/automovil/generate?cantidad=5, puedes cambiar el número por cualquier cantidad de automóviles que quieras generar.
